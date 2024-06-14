@@ -352,8 +352,13 @@
 -analyzer:"/Applications/Unity/Hub/Editor/2022.3.31f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"/Applications/Unity/Hub/Editor/2022.3.31f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/Door.cs"
+"Assets/Scripts/exitgame.cs"
+"Assets/Scripts/jumpscare.cs"
 "Assets/Scripts/keyScript.cs"
 "Assets/Scripts/lightScript.cs"
+"Assets/Scripts/menuscript.cs"
+"Assets/Scripts/monsAppear.cs"
+"Assets/Scripts/monsterChase.cs"
 "Assets/Scripts/SC_FPSController.cs"
 -langversion:9.0
 /deterministic

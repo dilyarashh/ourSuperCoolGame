@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/jumpscare.unity
+    guid: abf69c111ed684b30a8d7d55dddafce3
+  - enabled: 1
+    path: Assets/Scenes/menu.unity
+    guid: 2957d53ae3a2d483b8ddcd9169c562e7
   m_configObjects: {}
