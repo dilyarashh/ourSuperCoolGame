@@ -1,17 +1,50 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class monsterChase : MonoBehaviour
+public class MonsterAI : MonoBehaviour
 {
-     public Rigidbody monsRigid;
-     public Transform monsTrans, playTrans;
-     public int monSpeed;
+    public float speed = 3.0f; // Скорость преследования
+    private Transform target;
+    private bool isChasing = false;
+    private float chaseTime;
+    private float chaseStartTime;
 
-     void FixedUpdate() {
-           monsRigid.velocity = transform.forward * monSpeed * Time.deltaTime;
+    void Update()
+    {
+        if (isChasing)
+        {
+            ChaseTarget();
+            
+            if (Time.time - chaseStartTime >= chaseTime || Vector3.Distance(new Vector3(transform.position.x, 0, transform.position.z), new Vector3(target.position.x, 0, target.position.z)) <= 1.0f)
+            {
+                StopChase();
+            }
+        }
     }
-    void Update () {
-         monsTrans.LookAt(playTrans);
+
+    public void StartChase(Transform newTarget, float duration)
+    {
+        target = newTarget;
+        chaseTime = duration;
+        chaseStartTime = Time.time;
+        isChasing = true;
+        gameObject.SetActive(true); // Делаем монстра видимым
+    }
+
+    private void ChaseTarget()
+    {
+        if (target != null)
+        {
+            Vector3 direction = (target.position - transform.position).normalized;
+            direction.y = 0; // Игнорируем направление по оси Y
+            transform.position += direction * speed * Time.deltaTime;
+        }
+    }
+
+    private void StopChase()
+    {
+        isChasing = false;
+        gameObject.SetActive(false); // Скрываем монстра
+        // или
+        // Destroy(gameObject); // Если нужно уничтожить монстра
     }
 }
