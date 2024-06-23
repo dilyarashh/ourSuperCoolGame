@@ -1,4 +1,89 @@
-# This .gitignore file should be placed at the root of your Unity project directory
+# Папки, которые создаются Unity
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+
+# Папка пользовательских сборок
+UserSettings/
+
+# Монтажные файлы Visual Studio
+.vscode/
+.vs/
+*.csproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.opendb
+
+# Монтажные файлы Rider
+.idea/
+*.idea/
+*.dotSettings
+*.sln.iml
+
+# Монтажные файлы Visual Studio Code
+.vscode/
+
+# Макеты Unity
+*.pidb
+*.booproj
+*.svd
+*.user
+*.unityproj
+*.peak
+
+# Кэш ASM и зависимостей
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+
+# Unity Asset Store tools
+Store/
+
+# Монтажные файлы старых версий Mono
+*.pidb
+*.mdb
+
+# Монтажные файлы других инструментов
+*.tmproj
+
+# Автоматически созданные конфигурационные файлы локального компьютера
+.cobertura/
+.idea/
+.vscode/
+mono_crash.*
+
+# Скрытые файлы операционной системы
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+[Tt]humbs.db
+
+# Пакеты и архивы, которые могут использоваться и не должны использоваться
+*.unitypackage
+*.7z
+*.tar.gz
+*.gz
+*.tar
+*.zip
+
+# Папка локальных криптографических ключей, связанных с license
+.vsconfig# This .gitignore file should be placed at the root of your Unity project directory
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
